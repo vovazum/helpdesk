@@ -1,0 +1,25 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "name": "Проблема с принтером",
+      "description": "Принтер не печатает документы",
+      "status": true,
+      "created": 1744566586791
+    },
+    {
+      "id": "2",
+      "name": "Обновить ПО",
+      "description": "Необходимо обновить Windows до последней версии",
+      "status": false,
+      "created": 1744480186791
+    },
+    {
+      "id": "5lfgt4msd",
+      "name": "вапрвап",
+      "description": "651",
+      "status": true,
+      "created": 1744566612022
+    }
+  ]
+}

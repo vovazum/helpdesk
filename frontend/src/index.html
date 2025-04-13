@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HelpDesk</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>HelpDesk</h1>
+      <button id="addTicketBtn" class="btn">Добавить тикет</button>
+    </header>
+    
+    <div class="tickets-list" id="ticketsList">
+      
+      <div class="loading">Загрузка...</div>
+    </div>
+  </div>
+
+  <!-- Модальные окна -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal" id="ticketModal">
+      <h2 id="modalTitle">Добавить тикет</h2>
+      <form id="ticketForm">
+        <input type="hidden" id="ticketId">
+        <div class="form-group">
+          <label for="ticketName">Краткое описание</label>
+          <input type="text" id="ticketName" required>
+        </div>
+        <div class="form-group">
+          <label for="ticketDescription">Полное описание</label>
+          <textarea id="ticketDescription" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="ticketStatus">
+            Выполнено
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="cancelBtn" class="btn">Отмена</button>
+          <button type="submit" class="btn primary">Сохранить</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal" id="confirmModal" style="display: none;">
+      <h2>Подтверждение удаления</h2>
+      <p>Вы уверены, что хотите удалить этот тикет?</p>
+      <div class="form-actions">
+        <button type="button" id="confirmCancel" class="btn">Отмена</button>
+        <button type="button" id="confirmDelete" class="btn danger">Удалить</button>
+      </div>
+    </div>
+
+    <div class="modal" id="detailsModal" style="display: none;">
+      <h2>Детали тикета</h2>
+      <div id="detailsContent"></div>
+      <div class="form-actions">
+        <button type="button" id="closeDetails" class="btn">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
