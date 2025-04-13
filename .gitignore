@@ -7,11 +7,12 @@ package-lock.json
 # Frontend build
 frontend/dist/
 frontend/.cache/
+frontend/node_modules
 
 # Backend data
 backend/tickets.json
 backend/tickets.json.bak
-
+backend/node_modules
 # IDE
 .vscode/
 .idea/
