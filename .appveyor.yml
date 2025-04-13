@@ -1,0 +1,15 @@
+version: 1.0.{build}
+image: Visual Studio 2022
+environment:
+  nodejs_version: "16"
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+build_script:
+  - npm run build
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "your-email@example.com"
+  - git config --global user.name "Your Name"
+  - npm run deploy

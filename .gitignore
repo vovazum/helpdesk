@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Frontend build
+frontend/dist/
+frontend/.cache/
+
+# Backend data
+backend/tickets.json
+backend/tickets.json.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Debug logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.temp
